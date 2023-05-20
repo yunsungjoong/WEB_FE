@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import { Fragment } from 'react';
 
-function App() {
+function AppJSX() {
   const name = '성중';
-  const list = ['우유', '딸기', '바나나' , '요거트']
+  const list = ['우유', '딸기', '바나나' , '요거트' ,'헬로우']
   
   return (
     
@@ -15,10 +15,10 @@ function App() {
     <ul>
       {/* {list.map((item) => (
         <li>{item}</li>
-      ))} */}
+      ))} */} 
 
       {list.map((item) => (
-        <
+        <li>{item}</li>
       ))}
     </ul>
     <img 
@@ -30,4 +30,4 @@ function App() {
   
 }
 
-export default App;
+export default AppJSX;
