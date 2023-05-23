@@ -3,24 +3,22 @@
 }
 
 .profile {
-  /* position: relative; */
- width: 300px;
- text-align: center;
- padding: 1rem;
- background-color: #ebebeb;
- border-radius: 20px;
- box-shadow: 10px 12px 32px 0px rgba(0,0,0,0.75);
- margin-bottom: 1rem;
- -webkit-box-shadow: 10px 12px 32px 0px rgba(0,0,0,0.75);
- -moz-box-shadow: 10px 12px 32px 0px rgba(0,0,0,0.75);
+  width: 300px;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  box-shadow: 7px 5px 23px -9px rgba(0, 0, 0, 0.75);
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 7px 5px 23px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 5px 23px -9px rgba(0, 0, 0, 0.75);
 }
 
 .photo {
-  width:  200px;
+  width: 200px;
   height: 200px;
   border-radius: 100%;
 }
-
 
 .avatar {
   position: relative;
@@ -30,19 +28,27 @@
 }
 
 .new {
-position: absolute;
-left: 70%;
-top: 10%;
-background-color: aqua;
-border-radius: 0.5rem;
-padding: 0.2rem 0.5rem;
-text-transform: uppercase;  /* text 전부 대문자로 변경 */
-font-weight: bold;
+  position: absolute;
+  left: 70%;
+  top: 10%;
+  background-color: aquamarine;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.contatiner {
-  display: flex;
-  justify-content: center;
+.container {
+  width: 500px;
+  margin: auto;
+}
+
+.banner {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+  background-color: gold;
+  font-weight: bold;
 }
 
 .counter {
@@ -65,12 +71,18 @@ font-weight: bold;
 
 .button {
   font-size: 2rem;
-  padding : 0.2rem 1rem;
+  padding: 0.2rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  background: rgb(215, 127, 12);
   background: linear-gradient(
     90deg,
     rgba(215, 127, 12, 1) 0%,
     rgba(253, 220, 29, 1) 100%
   );
+}
+
+.total {
+  font-size: 1rem;
+  margin-left: -1.5rem;
 }
