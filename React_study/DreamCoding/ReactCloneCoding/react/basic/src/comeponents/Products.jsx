@@ -1,11 +1,13 @@
 import React, { useState , useEffect } from 'react'
 
 export default function Products() {
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
     const [products, setProducts] = useState([]);
+    const [checked, setChecked] = useState(false);
+    const handleChange = () => setChecked((prev) => !prev);
 
    useEffect(()=>{
-    fetch('data/products.json')
+    fetch(`data/${checked ? 'sale_' : ''}products.json`)
     .then((res) => res.json())
     .then((data) => {
         console.log('🔥 받아라~~~~');
@@ -14,9 +16,15 @@ export default function Products() {
     return ()=>{
         console.log('🍧 팥 빙수');
     }
-   }, [])
+   }, [checked])
     return (
         <>
+        <input 
+            id='checkbox'
+            type='checkbox' 
+            value={checked} 
+            onChange={handleChange}/>
+        <label htmlFor='checkbox'>Show Only 🔥 Sale</label>
             <ul>
                 {products.map((products) => (
                     <li key={products.id}>
@@ -27,7 +35,7 @@ export default function Products() {
                     </li>
                 ))}    
             </ul>  
-            <button onClick={() => setCount((prev) => prev + 1)}>{count}</button>  
+            {/* <button onClick={() => setCount((prev) => prev + 1)}>{count}</button>   */}
         </>
     );
 }
