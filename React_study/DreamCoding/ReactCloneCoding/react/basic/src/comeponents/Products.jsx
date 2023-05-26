@@ -33,10 +33,10 @@ export default function Products() {
                             <p>{products.price}</p>
                         </article>
                     </li>
-                ))}    
+                ))}      
             </ul>  
             {/* <button onClick={() => setCount((prev) => prev + 1)}>{count}</button>   */}
         </>
     );
-}
+}  
 
