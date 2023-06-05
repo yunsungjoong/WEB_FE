@@ -5,14 +5,16 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import AppCounter from './AppCounter';
 // import AppProducts from './AppProducts';
-import AppXY from './AppXY';
+// import AppXY from './AppXY';
 // import AppMentor from './AppMentor';
-import AppMentors from './AppMentors';
+// import AppMentors from './AppMentors';
+import AppForm from './AppForm'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppMentors></AppMentors>
+    {/* <AppMentors></AppMentors> */}
+    <AppForm></AppForm>
   </React.StrictMode>
 );
 
