@@ -10,13 +10,15 @@ import reportWebVitals from './reportWebVitals';
 // import AppMentors from './AppMentors';
 import AppForm from './AppForm'
 import AppWrap from './AppWrap';
+import AppTheme from './AppTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <AppMentors></AppMentors> */}
     {/* <AppForm></AppForm> */}
-    <AppWrap></AppWrap>
+    {/* <AppWrap></AppWrap> */}
+    <AppTheme />
   </React.StrictMode>
 );
 
