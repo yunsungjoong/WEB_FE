@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import personReducer from './reducer/person-reducer';
 
-export default function AppMentor() {
+export default function AppMentorsButton() {
   const [person, dispatch] = useReducer(personReducer, initialPerson);
 
   const handleUpdate = () => {
@@ -38,6 +38,23 @@ export default function AppMentor() {
       <button onClick={handleAdd}>멘토 추가하기</button>
       <button onClick={handleDelete}>멘토 삭제하기</button>
     </div>
+  );
+}
+
+function Button({ text, onClick }) {
+  console.log('Button', text, 're-rendering 😜');
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        backgroundColor: 'black',
+        color: 'white',
+        borderRadius: '20px',
+        margin: '0.4rem',
+      }}
+    >
+      {text}
+    </button>
   );
 }
 
