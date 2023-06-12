@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import useProducts from '../../hooks/use-products';
 
 export default function Products() {
@@ -16,7 +16,8 @@ export default function Products() {
             id='checkbox'
             type='checkbox' 
             value={checked} 
-            onChange={handleChange}/>
+            onChange={handleChange}
+        />
         <label htmlFor='checkbox'>Show Only 🔥 Sale</label>
             <ul>
                 {products.map((products) => (
