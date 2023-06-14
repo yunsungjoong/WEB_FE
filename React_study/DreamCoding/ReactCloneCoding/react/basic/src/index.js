@@ -5,13 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import AppMontorsButton from './AppMontorsButton';
 import AppProducts from './basic/AppProducts';
 import AppClass from './AppClass';
-
+import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <AppMontorsButton /> */}
     {/* <AppProducts /> */}
-    <AppClass />
+    <App></App>
   </React.StrictMode>
 );
 
