@@ -13,7 +13,6 @@ root.render(
     {/* <ApMontorsButton /> */}
     {/* <AppProducts /> */}
     <App></App>
-    <TailwindComponent />
   </React.StrictMode>
 );
 

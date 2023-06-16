@@ -9,7 +9,6 @@ function App() {
         <>
             <Button1 />
             <Button2 />
-            
             <StyeldComponent />
             <TailwindComponent />
         </>
