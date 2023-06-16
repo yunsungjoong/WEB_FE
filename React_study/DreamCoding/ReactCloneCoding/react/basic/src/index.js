@@ -6,12 +6,14 @@ import AppMontorsButton from './AppMontorsButton';
 import AppProducts from './basic/AppProducts';
 import AppClass from './AppClass';
 import App from './App';
+import TailwindComponent from './TailwindComponent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <AppMontorsButton /> */}
+    {/* <ApMontorsButton /> */}
     {/* <AppProducts /> */}
     <App></App>
+    <TailwindComponent />
   </React.StrictMode>
 );
 
