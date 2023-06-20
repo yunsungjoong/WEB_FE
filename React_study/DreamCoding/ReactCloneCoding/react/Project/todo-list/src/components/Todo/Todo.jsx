@@ -7,6 +7,7 @@ export default function Todo({ todo, onUpdate, onDelete }) {
         const status = e.target.checked ? 'completed' : 'active';
         onUpdate({...todo, status })
     }
+    const handleDelete = () => onDelete(todo);
     return (<li>
         <input 
             type='checkbox' 
@@ -16,7 +17,7 @@ export default function Todo({ todo, onUpdate, onDelete }) {
             />
             
         <label htmlFor='checkbox'>{text}</label>
-        <button>
+        <button onClick={handleDelete}>
             <FaTrashAlt />
         </button>
     </li>
