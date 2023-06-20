@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4} from 'uuid';
+
 
 export default function AddTodo({ onAdd }) {
     const [text , setText] = useState('');
@@ -9,7 +11,7 @@ export default function AddTodo({ onAdd }) {
             return;
         }
         // trim - 여백을 트림 앞뒤 여백을 없애준다. 그래도 문자열이 비어 있다면 빈값
-        onAdd({id: '고유한 값', text, status: 'active'})
+        onAdd({id: uuidv4(), text, status: 'active'})
         setText('');
     }
     return <form onSubmit={handleSubmit}>
