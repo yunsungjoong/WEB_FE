@@ -4,6 +4,7 @@
   --color-grey: #d1d1d1;
   --color-text: #22243b;
   --color-accent : #f16e03;
+  --color-white : white; 
 }
 
 body {
@@ -19,6 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items : center;
+  font-size: 1.2rem;
   background: rgb(128,122,228);
   background: linear-gradient(90deg, rgba(128,122,228,1) 19%, rgba(139,139,139,1) 100%);
 }
@@ -40,6 +42,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+* {
+  box-sizing: border-box;
+}
 
 ul {
   list-style: none;
@@ -50,3 +55,4 @@ button {
   outline: none;
   border: none;
 }
+
