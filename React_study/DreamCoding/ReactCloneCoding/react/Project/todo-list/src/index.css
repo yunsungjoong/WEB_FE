@@ -8,6 +8,14 @@
   --color-scrollbar: #aaa7a7;
 }
 
+html.dark {
+  --color-bg-dark: #1a1c35;
+  --color-bg: #22243b;
+  --color-grey: #4e4e4e;
+  --color-text: #fdfffd;
+
+}
+
 body {
   
   margin: 0;
@@ -38,7 +46,7 @@ body {
   flex-direction: column;
   box-shadow: 12px 11px 5px -5px rgba(0,0,0,0.48);
   -webkit-box-shadow: 12px 11px 5px -5px rgba(0,0,0,0.48);
-  -moz-box-shadow: 12px 11px 5px -5px rgba(0,0,0,0.48);
+  -moz-box-shadow: ƒ12px 11px 5px -5px rgba(0,0,0,0.48);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
