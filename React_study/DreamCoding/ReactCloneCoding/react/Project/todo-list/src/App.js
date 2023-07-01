@@ -6,7 +6,7 @@ import { DarkModeProvider } from './context/DarkModeContext';
 
 const filters = ['all', 'active', 'completed'];
 function App() {
-  const [filter, setFilter] = useState(filters[0]);
+  const [filter, setFilter] = useState(filters[2]);
   return (
     <DarkModeProvider>
       <Header filters={filters} filter={filter} onFilterChange={setFilter} />
