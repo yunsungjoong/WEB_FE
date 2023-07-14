@@ -8,7 +8,7 @@ function App() {
     <>
       <SearchHeader />
       <QueryClientProvider client={queryClient}>
-      <Outlet />
+        <Outlet />
       </QueryClientProvider>
     </>
   )
