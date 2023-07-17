@@ -1,14 +1,19 @@
-import { createContext } from 'react';
+import { createContext, useContext } from 'react';
 import Youtube from '../api/youtube';
 
-export const YoutubeApiContext = createContext()
+export const YoutubeApiContext = createContext();
 
-const youtube = new Youtuebe();
+const youtube = new Youtube();
 
-export function YoutuebeApiProvider({children}) {
+export function YoutubeApiProvider({ children }) {
     return (
-        <YoutubeApiContext.Provider value={{youtube}}>
+        <YoutubeApiContext.Provider value={{ youtube }}>
             {children}
         </YoutubeApiContext.Provider>
-    )
-}// 4분 56초 
+    );
+}
+
+export function useYoutubeApi() {
+    return useContext(YoutubeApiContext);
+}
+
