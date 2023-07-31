@@ -18,6 +18,6 @@ export default function VideoCard({ video }) {
             <p className='text-sm opacity-80'>{formatAgo(publishedAt)}</p>
         </div>
      </li>
-    );
+    );  
 }
 
