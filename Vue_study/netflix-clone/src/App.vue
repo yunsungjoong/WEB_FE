@@ -19,7 +19,7 @@ const { movie, showFullVideo } = storeToRefs(useMovie)
 
 onMounted(() => {
   setTimeout(() => movie.value = movies[0][0], 100)
-})
+})  
 </script>
 
 <template>
