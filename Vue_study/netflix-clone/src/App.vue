@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import movies from './movie.json';
+import movies from './movies.json';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
 import TrendingUp from 'vue-material-design-icons/TrendingUp.vue';
@@ -50,7 +50,7 @@ onMounted(() => {
 
     <div v-if="!showFullVideo">
       <div class="fixed flex z-20 top-0 right-0 w-full h-[50%] bg-black pl-[120px] bg-clip-border">
-        
+        <div class="absolute z-30 h[600px] left-[120px] w-[77%] right-0 top-0 bg-gradient-to-t from-black via-black" />
         <MovieDetails v-if="movie" :movie="movie"/>
         <video 
          v-if="movie"
@@ -65,6 +65,22 @@ onMounted(() => {
         <VideoCarousel class="pb-14" category="Horror Movies" :movies="movies[1]" />
         <VideoCarousel class="pb-32" category="Featured Movies" :movies="movies[2]" />
       </div>
+    </div>
+    
+    <div v-if="!showFullVideo" class="absolute z-20 h-[70%] left-[120px] w-[100%] right-0 bottom-0 bg-gradient-to-t from-black via-black" />
+    
+    <div v-if="showFullVideo">
+      <div @click="$event => showFullVideo = false" class="absolute z-50 p-2 m-4 bg-white bg-opacity-50 rounded-full cursor-pointer">
+        <ChevronLeft fillColor="FFFFFF" :size="40"/>
+      </div>
+      <video
+        v-if="movie"
+        :src="'/videos/'+movie.name+'.mp4'"
+        autoplay
+        loop
+        controls
+        class="absolute z-0 w-[100vw] h-full object-fit"
+      />
     </div>
   </div>
 </template>
