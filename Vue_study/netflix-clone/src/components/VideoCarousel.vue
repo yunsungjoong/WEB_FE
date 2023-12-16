@@ -34,7 +34,7 @@
                         class="pointer-events-none h-[100%] z-[-1]"
                         :src="'/images/'+slide.name+'.png'"
                         >
-
+  
 
                 </div>
 
