@@ -23,7 +23,7 @@
                 class="flex items-center object-cover text-white bg-transparent"
             >
                 <div
-                    @click="$event => fullScreenVideo(index)"
+                    
                     class="object-cover h-[100%] hover:brightness-125 cursor-pointer"
                     :class="currentSlide !== index ? 'border-4 border-transparent' : 'border-4 border-white',
                         currentSlideObject(slide, index)
@@ -54,7 +54,7 @@
     import { useMovieStore } from '../stores/movie'
     import { storeToRefs } from 'pinia';
     const useMovie = useMovieStore()
-    const { movie, showFullVideo} = storeToRefs(useMovie)
+    const { movie} = storeToRefs(useMovie)
 
     let currentSlide = ref(0)
 
@@ -67,10 +67,10 @@
         }
     }
 
-    const fullScreenVideo = (index) => {
-        currentSlide.value = index
-        setTimeout(() => showFullVideo.value = true, 500)
-    }
+    // const fullScreenVideo = (index) => {
+    //     currentSlide.value = index
+    //     setTimeout(() => showFullVideo.value = true, 500)
+    // }
 </script>
 
 <style>

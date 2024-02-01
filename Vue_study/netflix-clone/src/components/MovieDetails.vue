@@ -1,5 +1,5 @@
 <template>
-    <div v-if="movie" class="z-40 text-white w-[53%] pt-20">
+    <!-- <div v-if="movie" class="z-40 text-white w-[53%] pt-20">
         <div class="text-[55px] font-semibold font-serif">{{ movie.name }}</div>
         <div class="flex items-center text-lg pt-4">
             <div>{{ movie.year }}</div>
@@ -18,9 +18,9 @@
         </div>
         <div class="text-2xl pt-6">{{ movie.description }}</div>
             
-    </div>
+    </div> -->
 </template>
 
 <script setup>
-    defineProps({ movie: Object })
+    // defineProps({ movie: Object })
 </script>
