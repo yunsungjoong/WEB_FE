@@ -1,15 +1,12 @@
-import './App.css'
+import MyComponent from './MyComponent';
 
-function App() {
-  const name = '리액트'
-  return ( 
-  <>
-  {/* 주석은 이렇게 작성한다. */}
-  <div className='react'>{name}</div> 
-  <input />
-  </>
-  )
-       
-}   
 
+const App = () => {
+    return (
+      <MyComponent name="React" favoriteNumber={7} >
+        리액트
+      </MyComponent>
+
+    )
+};
 export default App;
