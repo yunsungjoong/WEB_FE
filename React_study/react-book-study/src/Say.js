@@ -6,8 +6,8 @@ const Say = () => {
     const onClickLeave = () => setMessage('안녕히 가세요!')
     return (
         <div>
-            <div onClick={onClickEnter}>입장</div>
-            <div onClick={onClickLeave}>퇴장</div>
+            <button onClick={onClickEnter}>입장</button>
+            <button onClick={onClickLeave}>퇴장</button>
             <h1>{message}</h1>
         </div>
     );
