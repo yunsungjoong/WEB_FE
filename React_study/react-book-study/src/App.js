@@ -24,7 +24,7 @@ class App extends Component {
                 />
                 <button onClick={
                     () => {
-                        alert(this.state.massage);
+                        alert(this.state.message);
                         this.setState({
                             massage: ''
                         });
