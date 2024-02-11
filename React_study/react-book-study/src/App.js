@@ -1,9 +1,38 @@
-import Say from './Say';
+import React, { Component } from 'react';
 
-const App = () => {
-    return <Say />;
-    
-    
-    
-};
-export default App;
+class App extends Component {
+    state = {
+        message: ''
+    }
+    render() {
+        return (
+            <div>
+                <h1>이벤트 연습</h1>       
+
+                <input 
+                    type="text"
+                    name="message"
+                    placeholder="아무거나 입력해 보세요"
+                    value={this.state.message}
+                    onChange={
+                        (e) => {
+                            this.setState({
+                                message: e.target.value
+                        })
+                    }
+                }
+                />
+                <button onClick={
+                    () => {
+                        alert(this.state.massage);
+                        this.setState({
+                            massage: ''
+                        });
+                    }
+                }>확인</button>
+            </div>
+        );
+    }
+}
+
+export default App;     
