@@ -4,7 +4,7 @@ const EventPractice = () => {
     const [ form, setForm] = useState({
         username:'',
         message:''
-    })
+    });
     const { username, message} = form;
     const onChange = e => {
         const nextForm = {
@@ -36,7 +36,6 @@ const EventPractice = () => {
                 value={username}
                 onChange={onChange}
             />
-
             <input 
                 type='text'
                 name='message'
