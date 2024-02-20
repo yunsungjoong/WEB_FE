@@ -5,8 +5,13 @@ const Info = () => {
     const [nickname, setNickname] = useState('');
 
     useEffect(() => {
-        console.log('마운트가될 때만 실행됩니다.');
-    }, []);
+        console.log('effect')
+        console.log(name);
+        return() => {
+            console.log('cleanup');
+            console.log(name);
+        };
+    }, [name]);
 
     
     
