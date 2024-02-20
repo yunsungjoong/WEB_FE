@@ -62,6 +62,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
         };
         return (
             <div>
+                {this.props.missing.value}
                 <h1 style={style} ref={ref => this.myRef=ref}>
                     {this.state.number}
                 </h1>      
