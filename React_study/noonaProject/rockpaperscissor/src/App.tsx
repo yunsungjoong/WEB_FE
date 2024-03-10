@@ -1,5 +1,5 @@
 import {useState} from 'react';
-
+import React from 'react';
 import Box from './component/Box';
 import './App.css';
 /* 
@@ -10,7 +10,24 @@ import './App.css';
 5. 3.4 의 결과를 가지고 누가 이겼는지 승패를 따진다. 
 6. 승패결과에 따라 테두리 색이 바뀌며 ( 이기거나 지거나 비기면 색상이 재각각 바뀐다.)
 */
-const choice = {
+
+type Choice = {
+  rock : {
+    name: string;
+    img: string;
+  };
+  scissors : {
+    name: string;
+    img: string;
+  };
+  paper : {
+    name: string;
+    img: string;
+  };
+
+}
+
+const choice: Choice = {
   rock: {
     name: "Rock",
     img: "https://velog.velcdn.com/images/gyultang/post/618ab3a0-cff7-4ffb-aafc-1a6a9acfee74/image.png"
@@ -28,16 +45,17 @@ const choice = {
 const title = {user:"user" ,computer:"computer"}
 
 function App() {
+  const [ userSelect, setUserSelect] = useState<Choice[keyof Choice] | null>(null)
   
-  const play = ( userChoice:string ) => { 
-    console.log(userChoice)
-  }  
+  const play = (userChoice: keyof Choice) => { 
+    setUserSelect(choice[userChoice])
+  };
 
   return ( 
     <>
       <div className='main'>
-        <Box title={title.user}/>
-        <Box title={title.computer} />
+        <Box title={title.user} item={userSelect}/>
+        {/* <Box title={title.computer} /> */}
       </div>
       <div className='rps-button'>
         <button onClick={() => play("scissors")}>가위</button>
