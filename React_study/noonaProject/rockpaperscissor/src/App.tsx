@@ -46,16 +46,28 @@ const title = {user:"user" ,computer:"computer"}
 
 function App() {
   const [ userSelect, setUserSelect] = useState<Choice[keyof Choice] | null>(null)
+  const [ computerSelect, setComputerSelect] = useState<Choice[keyof Choice] | null>(null)
   
   const play = (userChoice: keyof Choice) => { 
-    setUserSelect(choice[userChoice])
+    setUserSelect(choice[userChoice]);
+
+    let computerChoice = randomChoice();
+    setComputerSelect(computerChoice);
   };
 
+  const randomChoice = () => {
+    let itemArray = Object.keys(choice) as Array<keyof Choice>; // 객체의 key값만 Array로 만드는 것 
+    console.log("item array", itemArray);
+    let randomItem = Math.floor(Math.random() * itemArray.length);
+    console.log("random value", randomItem);
+    let final = itemArray[randomItem];
+    return choice[final] as Choice[keyof Choice];
+  }
   return ( 
     <>
       <div className='main'>
         <Box title={title.user} item={userSelect}/>
-        {/* <Box title={title.computer} /> */}
+        <Box title={title.computer} item={computerSelect} />
       </div>
       <div className='rps-button'>
         <button onClick={() => play("scissors")}>가위</button>
