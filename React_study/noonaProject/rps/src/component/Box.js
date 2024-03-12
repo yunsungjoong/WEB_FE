@@ -8,8 +8,8 @@ const Box = ( props ) => {
             <h2>{props.title}</h2>
 {/* 가위  https://blackbearwow.github.io/image/rockPaperScissors/scissors.png */}
 {/* 빠 : https://blog.kakaocdn.net/dn/bmjB2s/btqXHhp6kpG/TH14W4U612SxKo9uuR2sB0/img.png */}
-
         </div>
+        
     );
 };
 
