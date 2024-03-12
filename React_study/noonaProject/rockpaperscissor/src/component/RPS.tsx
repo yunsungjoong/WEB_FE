@@ -6,18 +6,18 @@ interface Scores {
 
 const scores: Scores = {
     '✊': 1,
-    '✋': 1,
-    '✌': 1,
+    '✋': 0,
+    '✌': -1,
 };
 
 console.log(scores)
 
 
-const RPS = () => {
+const RPS:React.FC = () => {
     
     return (
         <div>
-            sadsad
+            
         </div>
     );
 };
