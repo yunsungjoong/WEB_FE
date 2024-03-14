@@ -1,15 +1,29 @@
-.main-box {
-  height: 700px;
-  position: relative;
-  margin: 0 auto;
-  display: flex; /* 부모 요소를 플렉스 컨테이너로 설정 */
-  align-items: center; /* 세로 방향으로 가운데 정렬 */
-  
+button{
+  width: 80px;
+  height: 80px;
+  border: none;
+  background-color: rgb(236, 236, 236);
+  border-radius: 50% 50%;
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 30px;
+  transition: 0.3s;
 }
+
+button:hover{
+  scale: 1.2;
+}
+
+.game-name {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+
 .box { 
   margin: 10px ;
-  width: 600px;
-  height: 600;
+  width: 400px;
+  height: 550px;
   border: 1px solid black;
   background-color: white;
   justify-content: space-around;
@@ -19,36 +33,25 @@
   font-size: 20pt;
   border: 1px solid black;
   
-  
 }
 
 .item-img {
-  width: 400px;
+  width: 200px;
 }
 
 .main {
+  justify-content: center;
+  display: flex;
   
+}
+
+.btn { 
   display: flex;
   justify-content: center;
+  margin-top: 80px;
 }
 
-.rps-button { 
-  display: flex;
-  justify-content: center;
-  border-radius: 10px;
-  border-color: black;
-}
 
-.win { border : 10px solid green; color: green ;}
-.lose { border : 10px solid red; color: red ;}
-.tie {  border: 10px solid black; color: black;}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-
-
-}
+.win { border : 3px solid green; color: green ;}
+.lose { border : 3px solid red; color: red ;}
+.tie {  border: 3px solid black; color: black;}

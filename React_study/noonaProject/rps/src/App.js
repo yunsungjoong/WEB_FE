@@ -6,7 +6,7 @@ import Box from './component/Box';
 const choise = {
   rock: {
     name:"Rock",
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVZohJyhyZNNMTYOf7_E16KklxhKnoZQYkwLv1pEgmOfesxr5Akzd7ydV2ad-ECgoRhCM&usqp=CAU"
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsfwCYFRl_6ibJyaFBkESLGH8YYfuRM50eJA&usqp=CAU"
   },
   scissors: {
     name:"Scissors",
@@ -53,19 +53,21 @@ const App = () => {
 
   
   return (
-    <>
-      <div className='main-box'>
+    
+      <div>
+        <h1 className='game-name'>Rock! Scissors! Paper!</h1>
+        <h2 className='game-name'>스코어 0 : 0</h2>
         <div className='main'>
           <Box title="You" item={userSelect} result={result}/>
           <Box title="Computer" item={computerSelect} result={result}/>
         </div>
-        <div className='rps-button'>
-          <button onClick={() => play("scissors")}>가위</button>
-          <button onClick={() => play("rock")}>바위</button>
-          <button onClick={() => play("paper")}>보</button>
+        <div className='btn'>
+          <button onClick={() => play("scissors")}>✌️</button>
+          <button onClick={() => play("rock")}>✊</button>
+          <button onClick={() => play("paper")}>🖐️</button>
         </div>
       </div>
-    </>
+    
   );
 };
 
