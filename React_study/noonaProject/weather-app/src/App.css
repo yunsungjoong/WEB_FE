@@ -1,0 +1,21 @@
+body{
+    background-image: url(../public/Wheader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;  /* 백그라운드 반복잡업 X */
+}
+
+.container{
+    display: flex; 
+    justify-content: center; /* 가로 가운데 정렬*/
+    align-items: center; /* 세로 가운데 정렬 */
+    height: 100vh; /* 화면에 세로 100% */
+    flex-direction: column;
+}
+
+.weather-box{
+    border: solid white 10px;
+    padding: 200px;
+    border-radius: 20px;
+    background-color: azure;
+
+}
