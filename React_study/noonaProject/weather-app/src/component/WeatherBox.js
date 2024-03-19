@@ -14,4 +14,4 @@ const WeatherBox = ({ weather }) => {
     );
 };
 
-export default WeatherBox;
+export default WeatherBox;   
