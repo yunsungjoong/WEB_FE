@@ -14,11 +14,6 @@ function App() {
   const API_key = '20690d0edaf5b7153c40c4608209523a'
   const [apiError, setAPIError] = useState("");
 
-  
-
-  
-  
-
   const getWeatherByCurrentLocation = async(lat,lon) => {
     try {
       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}&units=metric`
@@ -28,8 +23,8 @@ function App() {
       setWeather(data);
       setLoading(false);
     } catch (err) {
-    setAPIError(err.message);
-    setLoading(false);
+        setAPIError(err.message);
+        setLoading(false);
     }    
   }
 
