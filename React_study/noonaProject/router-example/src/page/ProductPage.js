@@ -1,9 +1,12 @@
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 const ProductPage = () => {
+    let [ query, setQuery ] = useSearchParams();
+    console.log("ddddd",query.get("q"))
     return (
         <div>
-            <h1>ProductPage</h1>      
+            <h1>Show All Products!!!</h1>      
         </div>
     );
 };
