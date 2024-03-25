@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ProductAll from './page/ProductAll';
+import Login from './page/Login';
+import ProductDetail from './page/ProductDetail';
 function App() {
   return (
     /*
@@ -14,10 +17,18 @@ function App() {
       8. 상품을 검색할수있다.
     */
 
-    <div className="App">
-     
+    <div>
+      <Routes>
+        <Route path="/" element={<ProductAll/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/productAll/:id" element={<ProductDetail/>} />
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
+
+
+// 라우트 참고 사이트 = https://velog.io/@kandy1002/React-Router-Dom-%EA%B0%9C%EB%85%90%EC%9E%A1%EA%B8%B0
