@@ -32,8 +32,8 @@ const Navbar = () => {
                     {menuList.map(menu => <li>{menu}</li> )}
                 </ul>
                 <div>
-                    <FontAwesomeIcon icon={faSearch} />
-                    <input type='text' />
+                    <FontAwesomeIcon  icon={faSearch}  />
+                    <input type="text" placeholder="검색어 입력"/>
                 </div>
             </div>
         </div>
