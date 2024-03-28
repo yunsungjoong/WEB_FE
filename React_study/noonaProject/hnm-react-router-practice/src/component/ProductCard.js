@@ -1,15 +1,17 @@
 import React from 'react';
 
-const ProductCard = () => {
+const ProductCard = ({item}) => {
     return (
         <div>
-            
-            <img src="https://lp2.hm.com/hmgoepprod?set=source[/e1/28/e1287643ff5f9fb6238a73d28a8a534c49b02f7d.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" alt="Conscious Choice" />
-                <div>conscious choice</div>
-                <div>벨티드 트윌 코트</div>
-                <div>$9999000</div>
-                <div>신제품</div>
-            
+            <img
+                className="img-box"
+                src={item?.img} 
+                alt="Conscious Choice"    
+            />
+            {item?.choice ? <div>conscious choice</div> : null}
+            <div>{item?.title}</div>
+            <div>${item?.price}</div>
+            {item.new ? <div>신제품</div> : null}
         </div>
     );
 };
