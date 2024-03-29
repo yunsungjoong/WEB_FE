@@ -5,8 +5,11 @@ import ProductAll from './page/ProductAll';
 import Login from './page/Login';
 import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
+import { useState } from 'react';
 
 function App() {
+  const[authenticate, setAuthenticate] = useState(false) // true 이면 로그인됨 
+
   return (
     /*
       1. 전체 상품페이지, 로그인, 상품상세페이지 
