@@ -28,7 +28,7 @@ const Login = () => {
                     </Form.Group>
                     <Button variant="danger" type="submit">
                         로그인
-                    </Button>
+                    </Button>  
                 </Form>
             </Container>
 
