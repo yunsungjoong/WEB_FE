@@ -1,11 +1,16 @@
 import React from 'react';
 import { Form , Button, Container } from 'react-bootstrap';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
-const Login = () => {
+const Login = ( {setAuthenticate} ) => {
+    const navigate = useNavigate()
     const loginUser = (e) => { 
         e.preventDefault() // 리프레쉬 되지 않는다.
         console.log("login user function issue");
+        setAuthenticate(true)
+        navigate("/")
+        
     }
     return (
         <div>
