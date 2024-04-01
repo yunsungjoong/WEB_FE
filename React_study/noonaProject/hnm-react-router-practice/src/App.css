@@ -40,3 +40,7 @@
     cursor: pointer;
 }
 
+.product-img {
+    display: flex;
+    justify-content: center;
+}
