@@ -44,3 +44,12 @@
     display: flex;
     justify-content: center;
 }
+
+.search-box {
+    float: none;
+    display: block;
+    text-align: right;
+    
+    margin: 0;
+    
+}

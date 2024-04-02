@@ -18,7 +18,7 @@ const Navbar = () => {
 
     ];
 
-    const navigate = useNavigate();
+    
 
     const goToHome = () => {
         navigate("/");
@@ -26,6 +26,16 @@ const Navbar = () => {
     const goToLogin = () => {
         navigate("/login");
     }
+    const navigate = useNavigate();
+    const search = (event) => { 
+        if (event.key === "Enter") {
+    
+        // let keyword = event.target.value;
+
+        // url을 바꿔준다.
+        navigate(`/?q=${event.target.value}`);
+        }
+    };
     
     return (
         <div>
@@ -43,11 +53,16 @@ const Navbar = () => {
             </div>
             <div className="menu-area">
                 <ul className="menu-list">
-                    {menuList.map((menu, index) => <li key={index}>{menu}</li> )}
+                    {menuList.map((menu, index) => (
+                        <li key={index}>
+                            {menu}
+                        </li> 
+                    ))}
                 </ul>
-                <div>
+
+                <div className="search-box">
                     <FontAwesomeIcon  icon={faSearch}  />
-                    <input type="text" placeholder="검색어 입력"/>
+                    <input type="text" onKeyPress={(event) => search(event)} placeholder="검색어 입력"/>
                 </div>
             </div>
         </div>
