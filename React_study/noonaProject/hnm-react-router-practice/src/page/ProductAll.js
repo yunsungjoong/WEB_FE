@@ -20,7 +20,7 @@ const ProductAll = () => {
     useEffect(() => {
         getProducts();
     },[query]);
-    return (
+    return (  
         <Container>
             <Row>
                 {products.map((item) => (
