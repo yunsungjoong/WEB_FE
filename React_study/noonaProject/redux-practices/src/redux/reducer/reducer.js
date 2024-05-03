@@ -5,4 +5,4 @@ function reducer(state = initalState, action) {
     
 };
 
-export default reducer;
+export default reducer;  
