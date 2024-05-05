@@ -28,4 +28,4 @@ function reducer(state = initalState, action) {
 export default reducer;  
 
 
-// payload 필요한 값을 보내는 기능 
+// payload 필요한 값을 보내는 기능   
