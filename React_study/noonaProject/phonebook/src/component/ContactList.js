@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBox from './SearchBox';
-import ContactItem from './conTactItem';
+import ContactItem from './ContactItem';
 
 const ContactList = () => {
     return (
